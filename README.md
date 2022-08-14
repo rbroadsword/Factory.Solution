@@ -59,6 +59,7 @@ User Stories
 ## Known Bugs
 
 * Views pages WIP
+* Styles not working! 
 
 
 ## License
