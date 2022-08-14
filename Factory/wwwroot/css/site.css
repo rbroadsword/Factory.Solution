@@ -1,33 +1,57 @@
-﻿html {
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: white;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
   position: relative;
   min-height: 100%;
 }
-.lips{
-  max-height: 3rem;
-}
-.navMenu:link {
-  transition: all .5s ease-in-out;
-  font-family: cursive;
-}
-.navMenu:hover{
-  color:white;
-  transform: scale(1.5); 
-  font-family: cursive;
-}
-.navMenu{
-  color: hotpink;
-  font-family: cursive;
-  font-size: 1.5rem;
-  -webkit-text-stroke: 1px hotpink; 
-  margin: 1rem;
-}
+
 body {
+  /* Margin bottom by footer height */
   margin-bottom: 60px;
   background-color: hotpink;
   color: white;
 }
 h1{
   font-family: cursive;
+}
+.joan{
+  border-radius: .2rem;
 }
 .header{
   color: hotpink;
@@ -41,4 +65,41 @@ h1{
 				  1px 1px 2px #f9f9f9,
 				  1px -1px 0 #f9f9f9,
 				  -1px -1px 0 #f9f9f9;
+}
+.navMenu{
+  color: hotpink;
+  font-family: cursive;
+  font-size: 1.5rem;
+  -webkit-text-stroke: 1px hotpink; 
+  margin: 1rem;
+}
+
+.navMenu:link {
+  transition: all .5s ease-in-out;
+  font-family: cursive;
+}
+.navMenu:hover{
+  color:white;
+  transform: scale(1.5); 
+  font-family: cursive;
+}
+
+.lips{
+  max-height: 3rem;
+}
+
+img{
+  height: 50%;
+}
+
+.newClient{
+  margin: 1rem;
+  padding: .5rem;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
 }
