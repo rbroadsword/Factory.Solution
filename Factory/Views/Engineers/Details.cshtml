@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h1 class="text-center">~Engineer Details~</h1>
+<hr />
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Specialty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <td>@Html.DisplayFor(model => model.EngineerName)</td>
+    <td>@Html.DisplayFor(model => model.Specialty)</td>
+  </tbody>
+</table>
+
+<p class="text-center navMenu">@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</p>
+<p class="text-center navMenu">@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</p>
+<p class="text-center navMenu">@Html.ActionLink("Add New Engineer", "Create", "Engineers")</p>
