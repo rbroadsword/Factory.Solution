@@ -28,7 +28,7 @@ namespace Factory.Controllers
       }
 
       [HttpPost]
-      public ActionResult Create(Engineer enigineer)
+      public ActionResult Create(Engineer engineer)
       {
         _db.Engineers.Add(engineer); 
         _db.SaveChanges(); 
