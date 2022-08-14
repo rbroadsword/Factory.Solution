@@ -1,0 +1,34 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models;
+<div class="container">
+  <h1 class="text-center">~Engineers~</h1>
+
+  @if (@Model.Count == 0)
+  {
+    <h3>No engineers have been added yet!</h3>
+  } 
+
+  <table class="table">
+    <thead class="thead-light">
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Specialty</th>
+    </thead>
+    <tbody>
+      @foreach(Engineer engineer in Model)
+      {
+        <tr>  
+          <th scope="row">@Html.DisplayFor(modelEngineer => engineer.EngineerId)</th>
+          <td>@Html.ActionLink($"{engineer.EngineerName}", "Details", new { id = engineer.EngineerId })</td>
+          <td>@Html.DisplayFor(modelStylist => engineer.Specialty)</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <p class="text-center navMenu" >@Html.ActionLink("Add new engineer", "Create")</p>
+</div>
+
