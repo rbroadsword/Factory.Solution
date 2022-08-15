@@ -19,6 +19,15 @@
   </tbody>
 </table>
 
+<h3>@Html.DisplayFor(model => model.EngineerName) can work on these machines:</h3>
+<ul>
+@foreach(var join in Model.JoinEntities)
+{
+  <li>@join.Machine.MachineName</li>
+}
+</ul>
+
+<p class="text-center navMenu">@Html.ActionLink("Assign a Machine", "AddMachine", new { id = Model.EngineerId })</p>
 <p class="text-center navMenu">@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId })</p>
 <p class="text-center navMenu">@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId })</p>
 <p class="text-center navMenu">@Html.ActionLink("Add New Engineer", "Create", "Engineers")</p>

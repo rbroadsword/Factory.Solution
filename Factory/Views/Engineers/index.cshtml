@@ -9,9 +9,8 @@
   @if (@Model.Count == 0)
   {
     <h3>No engineers have been added yet!</h3>
-  } 
-
-  <table class="table">
+  } else {
+      <table class="table">
     <thead class="thead-light">
       <th scope="col">#</th>
       <th scope="col">Name</th>
@@ -28,6 +27,7 @@
       }
     </tbody>
   </table>
+  }
 
   <p class="text-center navMenu" >@Html.ActionLink("Add new engineer", "Create")</p>
 </div>
